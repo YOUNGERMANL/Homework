@@ -1,0 +1,32 @@
+/* div {
+    /* font-family: "Open Sans", "Arial", sans-serif; */
+/* } */
+
+.p-0 {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.p-1 {
+    text-decoration: line-through;
+}
+
+.p-2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.p-3 {
+    text-decoration: overline wavy;
+    word-spacing: 30px;
+    text-shadow: 1px 1px 1px #000000;
+    color: #300d51
+}
+
+.p-4 {
+    letter-spacing: 5px;
+    text-decoration: underline double;
+}
