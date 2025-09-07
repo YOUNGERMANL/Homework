@@ -1,0 +1,52 @@
+body {
+    background: #000;
+    color: aliceblue;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: #4f4f4f;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+}
+
+
+.box:hover .text {
+    opacity: 1;
+}
+
+.text {
+    color: #0dff00;
+    transition: all 1s 1s;
+    opacity: 0;
+    font-size: 30px;
+}
+
+
+.box:hover .box-scale {
+    width: 400%;
+    opacity: 1;
+}
+
+.box-scale {
+    transition: 1s;
+    position: absolute;
+    left: -300px;
+    bottom: 250px;
+    background: #ff0000;
+    height: 50px;
+    width: 10px;
+    opacity: 1;
+    transition-timing-function: ease;
+}
