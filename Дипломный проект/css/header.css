@@ -1,0 +1,242 @@
+.header__top {
+    margin-bottom: 76px;
+}
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    padding-top: 47px;
+    margin-bottom: 51.5px;
+}
+
+.logo {
+    position: relative;
+    max-width: 198px;
+    width: 100%;
+    z-index: 11;
+}
+
+
+.header__search {
+    display: flex;
+    align-items: end;
+    gap: 36px;
+}
+
+.header__search-link path {
+    transition: var(--transition);
+}
+
+.header__search-link:hover path {
+    fill: var(--accent-color);
+}
+
+.nav__list {
+    display: flex;
+    gap: 50px;
+}
+
+.nav__link {
+    color: var(--general-color-2);
+    font-family: "Archivo";
+    font-size: 22.33px;
+    font-weight: 600;
+    line-height: 1;
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: -9px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    z-index: -1;
+
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.nav__link:hover::after {
+    opacity: 1;
+}
+
+.burger-icon {
+    display: none;
+    width: 37px;
+    height: 31px;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+}
+
+.burger-icon span,
+.burger-icon span::before,
+.burger-icon span::after {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: var(--general-color-2);
+    transition: var(--transition);
+}
+
+.burger-icon span {
+    position: relative;
+}
+
+.burger-icon span::before,
+.burger-icon span::after {
+    content: '';
+    position: absolute;
+}
+
+.burger-icon span::before {
+    top: -10px;
+}
+
+.burger-icon span::after {
+    bottom: -10px;
+}
+
+.body--opened-menu .burger-icon span {
+    background: transparent;
+}
+
+.body--opened-menu .burger-icon span::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.body--opened-menu .burger-icon span::after {
+    bottom: 0px;
+    transform: rotate(-45deg);
+}
+
+.header__hero {
+    padding: 50px 0 140px;
+}
+
+.line {
+    background: var(--general-color-2);
+    height: 1px;
+    opacity: 0.5;
+}
+
+/* ------------------------------- */
+
+.hero__text {
+    position: relative;
+    font-weight: 600;
+    line-height: .98;
+}
+
+.hero__text span {
+    font-family: "Oswald";
+    max-width: 1142px;
+    font-size: 397.35px;
+    color: transparent;
+
+    position: absolute;
+    top: 8px;
+    left: 589px;
+    -webkit-text-stroke: 2px var(--accent-text);
+}
+
+.hero__title {
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-left: -8px;
+    max-width: 1073px;
+    color: var(--general-color-2);
+    font-family: "Oswald";
+    font-size: 198.68px;
+}
+
+.hero__img {
+    margin-top: -39px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero__img img {
+    width: 100%;
+    height: 519px;
+    object-fit: cover;
+    object-position: 27% 44%;
+}
+
+/* -------------------------------- */
+
+.hero__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-transform: uppercase;
+}
+
+.card {
+    background: #e3e3de;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 68px 56px 56px;
+    border: 1px solid var(--general-color);
+    height: 396px;
+
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: scaleY(1.1);
+}
+
+.card:hover .card__img {
+    transform: rotate(90deg);
+}
+
+.card__kicker {
+    color: var(--accent-color);
+    font-family: "Archivo";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.card__title {
+    color: var(--general-color);
+    font-family: "Oswald";
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.card__bottom {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card__bottom span {
+    color: var(--general-color);
+    font-family: "Archivo";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.43;
+    letter-spacing: 1px;
+}
+
+.card__img {
+    display: flex;
+    width: 13.13px;
+    height: 13.13px;
+    align-items: self-end;
+    transition: var(--transition);
+}

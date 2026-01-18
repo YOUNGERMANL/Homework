@@ -1,0 +1,83 @@
+:root {
+    --general-color: #141414;
+    --general-color-2: #ffffff;
+    --accent-text: #979797;
+    --accent-color: #f47521;
+    --transition: all .4s;
+}
+
+
+.body {
+    font-family: "Archivo", "Arial", sans-serif;
+    line-height: 1;
+    color: var(--general-color-2);
+    background: var(--general-color);
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.body--opened-menu .burger-icon span {
+    background: transparent;
+}
+
+.body--opened-menu .burger-icon span::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.body--opened-menu .burger-icon span::after {
+    bottom: 0px;
+    transform: rotate(-45deg);
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1735px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 213px;
+    width: 100%;
+    padding: 3px 15px;
+    height: 76px;
+
+    color: var(--general-color-2);
+    font-family: "Oswald";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+
+    background: linear-gradient(to right, var(--general-color-2) 50%, var(--accent-color) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+
+    transition: var(--transition);
+}
+
+.button:hover {
+    background-position: left bottom;
+    color: var(--accent-color);
+}
